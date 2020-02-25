@@ -22,11 +22,13 @@ function checkPasswordRequirements(input) {
   } else {
     showError(
       input,
-      `Password is not valid. Valid password must be at least: \n - one upper case English letter, 
-        \n - one lower case English letter, 
-        \n - one digit, \n - one special character, 
-        \n - minimum 7 characters in length, 
-        \n - maximum 30 characters in length`
+      `Password is not valid. Valid password must be at least: 
+        - one upper case English letter, 
+        - one lower case English letter, 
+        - one digit,
+        - one special character, 
+        - minimum 7 characters in length, 
+        - maximum 30 characters in length`
     );
   }
 }
