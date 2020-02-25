@@ -4,6 +4,10 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 
+const loginForm = document.getElementById("loginForm");
+const loginEmail = document.getElementById("loginEmail");
+const loginPassword = document.getElementById("loginPassword");
+
 //Check if email is valid
 function checkEmail(input) {
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -85,12 +89,23 @@ function checkLength(input, min, max) {
   }
 }
 
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
+if (form) {
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-  checkRequired([username, email, password, password2]);
-  checkLength(username, 2, 20);
-  checkEmail(email);
-  checkPasswordsMatch(password, password2);
-  checkPasswordRequirements(password);
-});
+    checkRequired([username, email, password, password2]);
+    checkLength(username, 2, 20);
+    checkEmail(email);
+    checkPasswordsMatch(password, password2);
+    checkPasswordRequirements(password);
+  });
+}
+
+if (loginForm) {
+  loginForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    checkRequired([loginEmail, loginPassword]);
+    checkEmail(loginEmail);
+  });
+}
