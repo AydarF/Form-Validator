@@ -99,13 +99,15 @@ h2 {
   visibility: visible;
 }
 
-/* Remove extra padding-bottom when password :requirements error message shows up */
-#form-control-password.form-control.error {
+/* Remove extra padding-bottom when password requirements error & username message shows up */
+#form-control-password.form-control.error,
+#form-control-username.form-control.error {
   padding-bottom: 0px;
 }
 
-/* Error message section for password requirements */
-.form-control.error small.passwordErrorMessage {
+/* Error message section for password requirements & username*/
+.form-control.error small.passwordErrorMessage,
+.form-control.error small.usernameErrorMessage {
   position: relative;
   color: var(--error-color);
 }
