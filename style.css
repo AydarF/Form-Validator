@@ -99,6 +99,17 @@ h2 {
   visibility: visible;
 }
 
+/* Remove extra padding-bottom when password :requirements error message shows up */
+#form-control-password.form-control.error {
+  padding-bottom: 0px;
+}
+
+/* Error message section for password requirements */
+.form-control.error small.passwordErrorMessage {
+  position: relative;
+  color: var(--error-color);
+}
+
 .form button {
   cursor: pointer;
   display: block;
